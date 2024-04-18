@@ -127,7 +127,7 @@ a:hover,
   margin-top: 1rem;
 }
 .column .skills {
-  font-size: 3em;
+  font-size: 3.5em;
 }
 .column .skills .skills-section {
   display: grid;
@@ -138,30 +138,34 @@ a:hover,
 .column .skills .h2-skills {
   text-align: center;
 }
-.column .skills .fa-html5:hover {
+.column .skills .html5:hover {
   color: orange;
 }
-.column .skills .fa-css3-alt:hover {
+.column .skills .css3:hover {
   color: rgb(71, 218, 255);
 }
-.column .skills .fa-js:hover {
+.column .skills .js:hover {
   color: yellow;
 }
-.column .skills .fa-sass:hover {
+.column .skills .sass:hover {
   color: pink;
 }
 .column .skills .type:hover {
   color: rgb(71, 218, 255);
 }
-.column .skills .fa-react:hover {
+.column .skills .react:hover {
   color: rgb(71, 218, 255);
 }
-.column .skills .fa-html5,
-.column .skills .fa-css3-alt,
-.column .skills .fa-js,
-.column .skills .fa-sass,
+.column .skills .astro:hover {
+  color: black;
+}
+.column .skills .html5,
+.column .skills .css3,
+.column .skills .js,
+.column .skills .sass,
 .column .skills .type,
-.column .skills .fa-react {
+.column .skills .react,
+.column .skills .astro {
   transition: 0.2s;
 }
 
@@ -269,6 +273,9 @@ a {
 }
 
 @media (max-width: 1000px) {
+  .column .skills {
+    font-size: 3em;
+  }
   .column .skills .skills-section {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -292,6 +299,9 @@ a {
   }
 }
 @media (max-width: 768px) {
+  .column .skills {
+    font-size: 3.5em;
+  }
   body {
     font-size: 14px;
   }

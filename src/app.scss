@@ -143,7 +143,7 @@ a:hover,
     }
 
     .skills {
-        font-size: 3em;
+        font-size: 3.5em;
 
         .skills-section {
             @include grid();
@@ -155,19 +155,19 @@ a:hover,
             text-align: center;
         }
 
-        .fa-html5:hover {
+        .html5:hover {
             color: orange;
         }
 
-        .fa-css3-alt:hover {
+        .css3:hover {
             color: $blue;
         }
 
-        .fa-js:hover {
+        .js:hover {
             color: yellow;
         }
 
-        .fa-sass:hover {
+        .sass:hover {
             color: pink;
         }
 
@@ -175,16 +175,21 @@ a:hover,
             color: $blue;
         }
 
-        .fa-react:hover {
+        .react:hover {
             color: $blue;
         }
 
-        .fa-html5,
-        .fa-css3-alt,
-        .fa-js,
-        .fa-sass,
+        .astro:hover {
+            color: black;
+        }
+
+        .html5,
+        .css3,
+        .js,
+        .sass,
         .type,
-        .fa-react {
+        .react,
+        .astro {
             transition: .2s;
         }
     }
@@ -304,6 +309,8 @@ a {
 @media (max-width:1000px) {
     .column {
         .skills {
+            font-size: 3em;
+
             .skills-section {
                 grid-template-columns: repeat(5, 1fr);
             }
@@ -315,7 +322,7 @@ a {
 
     .column {
         padding: 1rem;
-
+     
         .skills {
             .skills-section {
                 grid-template-columns: repeat(4, 1fr);
@@ -339,6 +346,12 @@ a {
 }
 
 @media (max-width:768px) {
+
+    .column{
+        .skills{
+            font-size: 3.5em;
+        }
+    }
     body {
         font-size: 14px;
     }

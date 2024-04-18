@@ -11,7 +11,7 @@ export const Projects = () => {
                     <article className='project'>
                         <h2 className='h2'>{Spanish ? "Calculadora" : "Calculator"}</h2>
                         <a href='https://danuz05.github.io/calculadora2.github.io/' target='_blank'>
-                            <img src='https://github.com/Danuz05/jhon-anduz.github.io/blob/main/calculadora-2.png?raw=true'></img>
+                            <img alt='imagen de una calculadora gris con un fondo azul' src='https://github.com/Danuz05/jhon-anduz.github.io/blob/main/calculadora-2.png?raw=true'></img>
                         </a>
                         <p className='margin-project'>{Spanish ? `Calculadora que permite sumar, restar, dividir y multiplicar,
                          inspirada en la calculadora de un videojuego llamado Dave the Diver.` : `Calculator that allows you to add,
