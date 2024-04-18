@@ -1,0 +1,472 @@
+// Header
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+$primaryColor: rgb(24, 31, 36);
+$secondary-Color: rgb(23, 23, 33);
+$blue: rgb(71, 218, 255);
+
+@mixin flex($justify: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin grid {
+    display: grid;
+    place-items: center;
+}
+
+.h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    @include flex(space-between);
+    padding: 1.25rem 2rem;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    backdrop-filter: blur(1rem);
+    box-shadow: 0px 0px 4px white;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    position: sticky;
+    top: 0px;
+
+    .navbar {
+        @include flex(space-between);
+        width: 100%
+    }
+
+    ul {
+        @include flex(space-between);
+
+        .listas {
+            padding: 1rem 1rem 1rem 0rem;
+        }
+    }
+
+    .fa-x {
+        display: none;
+    }
+
+    .header-div-container {
+        @include flex();
+        gap: 10px;
+    }
+}
+
+.en {
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px white;
+    padding: 6px;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.buttons-social,
+.buttons-descripcion {
+    box-shadow: 0px 0px 2px white;
+    list-style: none;
+    border-radius: 0.5rem;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.buttons-descripcion {
+    cursor: default;
+}
+
+.visible,
+.btn-header {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover,
+.en:hover {
+    color: $blue;
+}
+
+// main
+.main {
+    background: repeating-linear-gradient(120deg, $primaryColor 15%, $secondary-Color 25%);
+}
+
+.me,
+.skills,
+.project-section,
+.contact,
+.certification div,
+.project {
+    background-color: $primaryColor;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 2px white;
+    line-height: 1.5;
+}
+
+
+.column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+
+    .buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .skills {
+        font-size: 3em;
+
+        .skills-section {
+            @include grid();
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+        }
+
+        .h2-skills {
+            text-align: center;
+        }
+
+        .fa-html5:hover {
+            color: orange;
+        }
+
+        .fa-css3-alt:hover {
+            color: $blue;
+        }
+
+        .fa-js:hover {
+            color: yellow;
+        }
+
+        .fa-sass:hover {
+            color: pink;
+        }
+
+        .type:hover {
+            color: $blue;
+        }
+
+        .fa-react:hover {
+            color: $blue;
+        }
+
+        .fa-html5,
+        .fa-css3-alt,
+        .fa-js,
+        .fa-sass,
+        .type,
+        .fa-react {
+            transition: .2s;
+        }
+    }
+}
+
+.buttons-social,
+.contact-a,
+.en,
+.buttons-descripcion,
+a {
+    transition: .2s;
+}
+
+.buttons-social:hover,
+.en:hover,
+.buttons-descripcion:hover {
+    color: $blue ;
+    background-color: #01030965;
+}
+
+//projects
+.projects {
+    padding: 2rem;
+    background-color: transparent;
+
+    .project {
+        padding: 1rem;
+    }
+
+    .project-section {
+        padding: 2rem;
+        background-color: $primaryColor;
+
+        .project-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            img {
+                width: 100%;
+                border-radius: 1rem;
+            }
+
+            .margin-project {
+                margin: 5px 10px 5px 0px;
+                text-align: start
+            }
+
+            .skills-flex {
+                @include flex(flex-start);
+                gap: 1rem;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+// certificaciones
+.certification {
+    @include grid();
+    padding: 2rem;
+
+    div {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .certification-img {
+        width: 100%;
+        max-width: 360px;
+        box-shadow: 0px 0px 2px white;
+        border-radius: 1rem;
+        padding: 1rem;
+
+    }
+
+    .certification-section {
+        padding: 1rem;
+        width: 100%;
+        @include grid();
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+.contact-container {
+    padding: 1rem;
+}
+
+.contact {
+    padding: 1rem;
+    width: 300px;
+    aspect-ratio: 16/9;
+    @include flex();
+    margin: 0 auto 2rem auto;
+
+    .contact-a {
+        font-size: 3rem;
+    }
+
+    .contact-a:hover {
+        transform: scale(1.1)
+    }
+
+    .contact-article {
+        @include flex();
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width:1000px) {
+    .column {
+        .skills {
+            .skills-section {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: 840px) {
+
+    .column {
+        padding: 1rem;
+
+        .skills {
+            .skills-section {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+
+    .projects {
+        padding: 1rem;
+
+        .project-section {
+            padding: 1rem;
+
+            .project-column {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .h2 {
+        font-size: 1rem;
+    }
+
+    .header {
+        padding: 1rem;
+        font-size: 0.8rem;
+
+        ul {
+            position: fixed;
+            inset: 0;
+            right: auto;
+            background-color: var(--clr-bg);
+            border-right: 1px solid var(--clr-gray);
+            z-index: 999;
+            padding: 2rem 4rem 2rem 1rem;
+            transform: translateX(-100%);
+            transition: transform .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 1.2rem;
+            background-color: $primaryColor;
+            height: 100vh;
+
+            .listas {
+                padding: 4px;
+            }
+        }
+
+        .visible {
+            gap: 1.3rem;
+            display: flex;
+            transform: translateX(0);
+            border-right: 1px solid #fafafa10;
+        }
+
+        .fa-x {
+            cursor: pointer;
+            display: block;
+        }
+
+        .btn-header {
+            display: block;
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    .column {
+
+        grid-template-columns: repeat(1, 1fr);
+
+        .skills {
+            .skills-section {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+
+    .certification {
+        padding: 1rem;
+
+        .certification-section {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .contact {
+        .contact-a {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media (max-width: 630px) {
+    .certification {
+        .certification-section {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        a {
+            max-width: 80%;
+        }
+
+    }
+}
+
+@media (max-width:420px) {
+
+    .contact {
+        height: 180px;
+    }
+
+    .certification {
+        .certification-section {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .header {
+        h1 {
+            font-size: 1.5em;
+        }
+    }
+
+    .column {
+        .skills {
+            .skills-section {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+
+    .contact {
+        width: 90%;
+
+        .contact-a {
+            font-size: 2rem;
+        }
+    }
+}

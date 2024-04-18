@@ -1,0 +1,30 @@
+import React from 'react'
+import { useUserSpanish } from '../Userprovider'
+
+export const Projects = () => {
+    const Spanish = useUserSpanish()
+    return (
+        <div className='projects' id='project'>
+            <section className='project-section' >
+                <h2 className='h2 center'>{Spanish ? "Proyectos" : "Projects"}</h2>
+                <article className='project-column'>
+                    <article className='project'>
+                        <h2 className='h2'>{Spanish ? "Calculadora" : "Calculator"}</h2>
+                        <a href='https://danuz05.github.io/calculadora2.github.io/' target='_blank'>
+                            <img src='https://github.com/Danuz05/jhon-anduz.github.io/blob/main/calculadora-2.png?raw=true'></img>
+                        </a>
+                        <p className='margin-project'>{Spanish ? `Calculadora que permite sumar, restar, dividir y multiplicar,
+                         inspirada en la calculadora de un videojuego llamado Dave the Diver.` : `Calculator that allows you to add,
+                          subtract, divide and multiply, inspired by the calculator in a video game called Dave the Diver.`}
+                        </p>
+                        <section className='skills-flex'>
+                            <li className=' buttons-descripcion'>HTML </li>
+                            <li className=' buttons-descripcion'>CSS </li>
+                            <li className=' buttons-descripcion'>javaScript </li>
+                        </section>
+                    </article>
+                </article>
+            </section>
+        </div>
+    )
+}
