@@ -322,7 +322,7 @@ a {
 
     .column {
         padding: 1rem;
-     
+
         .skills {
             .skills-section {
                 grid-template-columns: repeat(4, 1fr);
@@ -347,11 +347,12 @@ a {
 
 @media (max-width:768px) {
 
-    .column{
-        .skills{
+    .column {
+        .skills {
             font-size: 3.5em;
         }
     }
+
     body {
         font-size: 14px;
     }
@@ -430,8 +431,11 @@ a {
     }
 
     .contact {
+        .h2{
+            font-size: 1.3rem;
+        }
         .contact-a {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
         }
     }
 }
@@ -441,11 +445,9 @@ a {
         .certification-section {
             grid-template-columns: repeat(1, 1fr);
         }
-
         a {
             max-width: 80%;
         }
-
     }
 }
 
@@ -453,6 +455,9 @@ a {
 
     .contact {
         height: 180px;
+        p{
+            font-size: 1rem;
+        }
     }
 
     .certification {
@@ -477,9 +482,5 @@ a {
 
     .contact {
         width: 90%;
-
-        .contact-a {
-            font-size: 2rem;
-        }
     }
 }
