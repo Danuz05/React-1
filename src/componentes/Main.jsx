@@ -22,12 +22,18 @@ export const AboutMe = () => {
     return (
         <section className='me' id='about-me'>
             <h2 className='h2'>{Spanish ? "Sobre mi" : "About me"}</h2>
-            <p>{Spanish ? `Mi nombre es Jhon Anduz, tengo 20 años, soy de Venezuela, mi objetivo es conseguir mi primer trabajo como desarrollador web front end` :
-                `My name is Jhon Anduz, I am 20 years old, I am from Venezuela, my goal is to get my first job as a front end web developer.`}
+            <p>{Spanish ? `Mi nombre es Jhon Anduz, tengo 20 años, soy de Venezuela, mi objetivo es conseguir mi primer
+             trabajo como desarrollador web front end` :
+                `My name is Jhon Anduz, I am 20 years old, I am from Venezuela, my goal is to get my first job 
+                as a front end web developer.`}
             </p>
             <article className='buttons'>
-                <a className='buttons-social' href='https://github.com/Danuz05' target='_blank'>github <i className="fa-brands fa-github"></i></a>
-                <a className='buttons-social' href='https://www.linkedin.com/in/jhon-anduz-buriel-b96109280' target='_blank'>LinkedIn <i className="fa-brands fa-linkedin"></i></a>
+                <a className='buttons-social' href='https://github.com/Danuz05' target='_blank'>github
+                    <i className="fa-brands fa-github"></i>
+                </a>
+                <a className='buttons-social' href='https://www.linkedin.com/in/jhon-anduz-buriel-b96109280' target='_blank'>LinkedIn
+                    <i className="fa-brands fa-linkedin"></i>
+                </a>
             </article>
         </section>
     )
