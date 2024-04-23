@@ -135,7 +135,7 @@ a:hover,
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 2rem;
-
+  
     .buttons {
         display: flex;
         gap: 1rem;
@@ -369,8 +369,6 @@ a {
             position: fixed;
             inset: 0;
             right: auto;
-            background-color: var(--clr-bg);
-            border-right: 1px solid var(--clr-gray);
             z-index: 999;
             padding: 2rem 4rem 2rem 1rem;
             transform: translateX(-100%);
@@ -431,9 +429,10 @@ a {
     }
 
     .contact {
-        .h2{
+        .h2 {
             font-size: 1.3rem;
         }
+
         .contact-a {
             font-size: 2.8rem;
         }
@@ -445,6 +444,7 @@ a {
         .certification-section {
             grid-template-columns: repeat(1, 1fr);
         }
+
         a {
             max-width: 80%;
         }
@@ -455,7 +455,8 @@ a {
 
     .contact {
         height: 180px;
-        p{
+
+        p {
             font-size: 1rem;
         }
     }
