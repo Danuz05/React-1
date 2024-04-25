@@ -7,7 +7,7 @@ export const Contact = () => {
     <div className='contact-container' >
       <div className='contact'>
         <footer className='footer'>
-          <h2 className='h2 center'>{Spanish ? "Contáctame" : "Contact me"}</h2>
+          <h2 className='h2 center'>{Spanish ? "Contáctame":"Contact me"}</h2>
           <article className='contact-article'>
             <li className='email'>
               <p className='email-p'>jhonanduz95@gmail.com</p>
