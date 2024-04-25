@@ -8,15 +8,13 @@ export const Contact = () => {
       <div className='contact'>
         <footer className='footer'>
           <h2 className='h2 center'>{Spanish ? "Contáctame" : "Contact me"}</h2>
-         
+          <p>{Spanish?"teléfono":"Phone number"}: <strong>+58-412-1818892</strong></p>
           <article className='contact-article'>
-        
             <li className='email'>
               <p className='email-p'>jhonanduz95@gmail.com</p>
               <a className='contact-a hover-contact' href="mailto:jhonanduz95@gmail.com"><i className="fa-solid fa-envelope"></i>
               </a>
             </li>
-
             <a className='contact-a' href="https://www.linkedin.com/in/jhon-anduz-buriel-b96109280" target='_blank'>
               <i className="fa-brands fa-linkedin"></i>
             </a>
