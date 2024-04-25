@@ -8,7 +8,6 @@ export const Contact = () => {
       <div className='contact'>
         <footer className='footer'>
           <h2 className='h2 center'>{Spanish ? "Contáctame" : "Contact me"}</h2>
-          <p>{Spanish?"teléfono":"Phone number"}: <strong>+58-412-1818892</strong></p>
           <article className='contact-article'>
             <li className='email'>
               <p className='email-p'>jhonanduz95@gmail.com</p>
