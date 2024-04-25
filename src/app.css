@@ -99,7 +99,7 @@ a:hover,
 }
 
 .main {
-  background: repeating-linear-gradient(120deg, rgb(24, 31, 36) 15%, rgb(23, 23, 33) 25%);
+  background: repeating-linear-gradient(120deg, rgb(24, 31, 36) 15%, rgb(44, 51, 56) 25%);
 }
 
 .me,
@@ -130,10 +130,11 @@ a:hover,
   font-size: 3.5em;
 }
 .column .skills .skills-section {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 .column .skills .h2-skills {
   text-align: center;
@@ -210,10 +211,9 @@ a {
 }
 .projects .project-section .project-column .skills-flex {
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: center;
-  gap: 1rem;
-  width: 100%;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -271,21 +271,32 @@ a {
   align-items: center;
   gap: 1rem;
 }
-
-@media (max-width: 1000px) {
-  .column .skills {
-    font-size: 3em;
-  }
-  .column .skills .skills-section {
-    grid-template-columns: repeat(5, 1fr);
-  }
+.contact .email {
+  position: relative;
+  transition: 0.2s;
 }
+.contact .email .email-p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -24px;
+  background-color: rgb(24, 31, 36);
+  padding: 4px 8px;
+  box-shadow: 0px 0px 2px white;
+  display: none;
+  font-size: 14px;
+  color: rgb(71, 218, 255);
+}
+.contact .email:hover {
+  transform: scale(1.1);
+}
+.contact .email:hover .email-p {
+  display: block;
+}
+
 @media (max-width: 840px) {
   .column {
     padding: 1rem;
-  }
-  .column .skills .skills-section {
-    grid-template-columns: repeat(4, 1fr);
   }
   .projects {
     padding: 1rem;
@@ -353,9 +364,6 @@ a {
   .column {
     grid-template-columns: repeat(1, 1fr);
   }
-  .column .skills .skills-section {
-    grid-template-columns: repeat(4, 1fr);
-  }
   .certification {
     padding: 1rem;
   }
@@ -389,9 +397,6 @@ a {
   }
   .header h1 {
     font-size: 1.5em;
-  }
-  .column .skills .skills-section {
-    grid-template-columns: repeat(3, 1fr);
   }
   .contact {
     width: 90%;

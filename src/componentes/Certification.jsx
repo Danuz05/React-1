@@ -1,5 +1,5 @@
 import React from 'react'
-import freecodecamp from "../imagenes/Captura de pantalla (37).png"
+import freecodecamp from "../imagenes/Captura-de-pantalla-_37_.webp"
 import egg from "../imagenes/Programación Web desde Cero. .webp"
 import { useUserSpanish } from '../Userprovider'
 
