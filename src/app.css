@@ -69,17 +69,11 @@ li {
   color: white;
 }
 
-.buttons-social,
 .buttons-descripcion {
   box-shadow: 0px 0px 2px white;
   list-style: none;
   border-radius: 0.5rem;
   padding: 6px 10px;
-  cursor: pointer;
-}
-
-.buttons-descripcion {
-  cursor: default;
 }
 
 .visible,
@@ -120,6 +114,15 @@ a:hover,
   padding: 1rem 2rem;
 }
 
+.buttons {
+  display: flex;
+  gap: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .column {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -131,10 +134,6 @@ a:hover,
   flex-direction: column;
   gap: 12px;
 }
-.column .buttons {
-  display: flex;
-  gap: 12px;
-}
 .column .skills {
   font-size: 3.5em;
 }
@@ -144,9 +143,6 @@ a:hover,
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
-}
-.column .skills .h2-skills {
-  text-align: center;
 }
 .column .skills .html5:hover {
   color: orange;
@@ -179,7 +175,6 @@ a:hover,
   transition: 0.2s;
 }
 
-.buttons-social,
 .contact-a,
 .en,
 .buttons-descripcion,
@@ -187,16 +182,12 @@ a {
   transition: 0.2s;
 }
 
-.buttons-social:hover,
 .en:hover,
 .buttons-descripcion:hover {
   color: rgb(71, 218, 255);
   background-color: rgba(1, 3, 9, 0.3960784314);
 }
 
-.projects {
-  background-color: transparent;
-}
 .projects .project {
   padding: 1rem;
   display: flex;
@@ -218,13 +209,6 @@ a {
 .projects .project-section .project-column img {
   width: 100%;
   border-radius: 1rem;
-}
-.projects .project-section .project-column .skills-flex {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
 }
 
 .center {

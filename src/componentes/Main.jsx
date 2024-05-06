@@ -28,10 +28,10 @@ export const AboutMe = () => {
                 as a front end web developer.`}
             </p>
             <article className='buttons'>
-                <a className='buttons-social' href='https://github.com/Danuz05'
+                <a className='buttons-descripcion' href='https://github.com/Danuz05'
                     target='_blank'>github <i className="fa-brands fa-github"></i>
                 </a>
-                <a className='buttons-social' href='https://www.linkedin.com/in/jhon-anduz-buriel-b96109280'
+                <a className='buttons-descripcion' href='https://www.linkedin.com/in/jhon-anduz-buriel-b96109280'
                     target='_blank'>LinkedIn <i className="fa-brands fa-linkedin"></i>
                 </a>
             </article>
@@ -42,7 +42,7 @@ export const AboutMe = () => {
 export const Skills = () => {
     return (
         <section className='skills'>
-            <h2 className='h2 h2-skills'>Skills</h2>
+            <h2 className='h2 center'>Skills</h2>
             <section className='skills-section'>
                 <DiHtml5 className='html5' />
                 <FaCss3Alt className='css3' />

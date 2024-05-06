@@ -27,11 +27,11 @@ export const Calculator = () => {
                          inspirada en la calculadora de un videojuego llamado Dave the Diver.` : `Calculator that allows you to add,
                           subtract, divide and multiply, inspired by the calculator in a video game called Dave the Diver.`}
             </p>
-            <section className='skills-flex'>
+            <article className='buttons'>
                 <li className=' buttons-descripcion'>HTML </li>
                 <li className=' buttons-descripcion'>CSS </li>
                 <li className=' buttons-descripcion'>javaScript </li>
-            </section>
+            </article>
         </article>
     )
 }

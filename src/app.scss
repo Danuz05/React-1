@@ -88,17 +88,11 @@ li {
     color: white;
 }
 
-.buttons-social,
 .buttons-descripcion {
     box-shadow: 0px 0px 2px white;
     list-style: none;
     border-radius: 0.5rem;
     padding: 6px 10px;
-    cursor: pointer;
-}
-
-.buttons-descripcion {
-    cursor: default;
 }
 
 .visible,
@@ -140,6 +134,13 @@ a:hover,
     padding: 1rem 2rem;
 }
 
+.buttons {
+    display: flex;
+    gap: 12px;
+    @include flex(flex-start);
+    flex-wrap: wrap;
+}
+
 .column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -150,11 +151,6 @@ a:hover,
         @include gap()
     }
 
-    .buttons {
-        display: flex;
-        gap: 12px;
-    }
-
     .skills {
         font-size: 3.5em;
 
@@ -162,10 +158,6 @@ a:hover,
             @include flex();
             gap: 1.5rem;
             flex-wrap: wrap;
-        }
-
-        .h2-skills {
-            text-align: center;
         }
 
         .html5:hover {
@@ -208,7 +200,6 @@ a:hover,
     }
 }
 
-.buttons-social,
 .contact-a,
 .en,
 .buttons-descripcion,
@@ -216,7 +207,6 @@ a {
     transition: .2s;
 }
 
-.buttons-social:hover,
 .en:hover,
 .buttons-descripcion:hover {
     color: $blue ;
@@ -225,8 +215,6 @@ a {
 
 //projects
 .projects {
-
-    background-color: transparent;
 
     .project {
         padding: 1rem;
@@ -246,12 +234,6 @@ a {
             img {
                 width: 100%;
                 border-radius: 1rem;
-            }
-
-            .skills-flex {
-                @include flex(start);
-                gap: 10px;
-                flex-wrap: wrap;
             }
         }
     }
