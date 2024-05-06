@@ -22,9 +22,18 @@ $blue: rgb(71, 218, 255);
     place-items: center;
 }
 
+@mixin gap() {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .h2 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
 }
 
 body {
@@ -129,16 +138,25 @@ a:hover,
     line-height: 1.5;
 }
 
+.column,
+.projects,
+.certification {
+    padding: 1rem 2rem;
+}
+
 .column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    padding: 2rem;
+
+    .me,
+    .skills {
+        @include gap()
+    }
 
     .buttons {
         display: flex;
-        gap: 1rem;
-        margin-top: 1rem;
+        gap: 12px;
     }
 
     .skills {
@@ -211,16 +229,18 @@ a {
 
 //projects
 .projects {
-    padding: 2rem;
+
     background-color: transparent;
 
     .project {
         padding: 1rem;
+        @include gap();
     }
 
     .project-section {
         padding: 2rem;
         background-color: $primaryColor;
+        @include gap();
 
         .project-column {
             display: grid;
@@ -230,11 +250,6 @@ a {
             img {
                 width: 100%;
                 border-radius: 1rem;
-            }
-
-            .margin-project {
-                margin: 5px 10px 5px 0px;
-                text-align: start
             }
 
             .skills-flex {
@@ -253,7 +268,6 @@ a {
 // certificaciones
 .certification {
     @include grid();
-    padding: 2rem;
 
     div {
         padding: 1rem;
@@ -324,8 +338,8 @@ a {
         .email-p {
             display: block;
         }
-        transform: scale(1.1)
 
+        transform: scale(1.1)
     }
 }
 
@@ -346,7 +360,10 @@ a {
                 grid-template-columns: repeat(1, 1fr);
             }
         }
+    }
 
+    .certification {
+        padding: 1rem;
     }
 }
 
@@ -356,14 +373,6 @@ a {
         .skills {
             font-size: 3.5em;
         }
-    }
-
-    body {
-        font-size: 14px;
-    }
-
-    .h2 {
-        font-size: 1rem;
     }
 
     .header {
@@ -415,7 +424,6 @@ a {
     }
 
     .column {
-
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -448,27 +456,30 @@ a {
             max-width: 80%;
         }
     }
+
+    .me,
+    .skills,
+    .project-section,
+    .contact,
+    .certification div,
+    .project {
+        padding: 1.5rem;
+    }
+
+    .h2 {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width:420px) {
 
     .contact {
         height: 180px;
-
-        p {
-            font-size: 1rem;
-        }
     }
 
     .certification {
         .certification-section {
             grid-template-columns: repeat(1, 1fr);
-        }
-    }
-
-    .header {
-        h1 {
-            font-size: 1.5em;
         }
     }
 

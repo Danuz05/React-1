@@ -7,7 +7,10 @@
 
 .h2 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
 }
 
 body {
@@ -115,16 +118,26 @@ a:hover,
   line-height: 1.5;
 }
 
+.column,
+.projects,
+.certification {
+  padding: 1rem 2rem;
+}
+
 .column {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  padding: 2rem;
+}
+.column .me,
+.column .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .column .buttons {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 12px;
 }
 .column .skills {
   font-size: 3.5em;
@@ -186,15 +199,20 @@ a {
 }
 
 .projects {
-  padding: 2rem;
   background-color: transparent;
 }
 .projects .project {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .projects .project-section {
   padding: 2rem;
   background-color: rgb(24, 31, 36);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .projects .project-section .project-column {
   display: grid;
@@ -204,10 +222,6 @@ a {
 .projects .project-section .project-column img {
   width: 100%;
   border-radius: 1rem;
-}
-.projects .project-section .project-column .margin-project {
-  margin: 5px 10px 5px 0px;
-  text-align: start;
 }
 .projects .project-section .project-column .skills-flex {
   display: flex;
@@ -224,7 +238,6 @@ a {
 .certification {
   display: grid;
   place-items: center;
-  padding: 2rem;
 }
 .certification div {
   padding: 1rem;
@@ -308,16 +321,13 @@ a {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+  .certification {
+    padding: 1rem;
+  }
 }
 @media (max-width: 768px) {
   .column .skills {
     font-size: 3.5em;
-  }
-  body {
-    font-size: 14px;
-  }
-  .h2 {
-    font-size: 1rem;
   }
   .header {
     padding: 1rem;
@@ -384,19 +394,24 @@ a {
   .certification a {
     max-width: 80%;
   }
+  .me,
+  .skills,
+  .project-section,
+  .contact,
+  .certification div,
+  .project {
+    padding: 1.5rem;
+  }
+  .h2 {
+    font-size: 1.3rem;
+  }
 }
 @media (max-width: 420px) {
   .contact {
     height: 180px;
   }
-  .contact p {
-    font-size: 1rem;
-  }
   .certification .certification-section {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .header h1 {
-    font-size: 1.5em;
   }
   .contact {
     width: 90%;
