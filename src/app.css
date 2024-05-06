@@ -247,7 +247,7 @@ a {
   padding: 1rem;
 }
 .certification .certification-section {
-  padding: 1rem;
+  padding: 1rem 0rem;
   width: 100%;
   display: grid;
   place-items: center;

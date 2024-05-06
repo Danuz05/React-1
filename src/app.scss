@@ -280,7 +280,7 @@ a {
     }
 
     .certification-section {
-        padding: 1rem;
+        padding: 1rem 0rem;
         width: 100%;
         @include grid();
         grid-template-columns: repeat(2, 1fr);
