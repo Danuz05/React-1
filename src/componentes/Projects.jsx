@@ -19,7 +19,7 @@ export const Calculator = () => {
     const Spanish = useUserSpanish()
     return (
         <article className='project'>
-            <h2 className='h2'>{Spanish ? "Calculadora" : "Calculator"}</h2>
+            <h3>{Spanish ? "Calculadora" : "Calculator"}</h3>
             <a href='https://danuz05.github.io/calculadora2.github.io/' target='_blank'>
                 <img alt='imagen de una calculadora gris con un fondo azul' src='https://github.com/Danuz05/jhon-anduz.github.io/blob/main/calculadora-2.png?raw=true'></img>
             </a>
